@@ -2,7 +2,7 @@ import { ArrowBack, VolumeUp } from "@mui/icons-material";
 import { Button, Container, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { getTranslation } from "../apis/feature";
+import { getTranslation } from "../actions/feature";
 import { useDispatch, useSelector } from "react-redux";
 import { getWordsFail, getWordsRequest, getWordsSuccess } from "../redux/slices";
 
@@ -33,7 +33,7 @@ useEffect(() => {
   
 
   return (
-    <div>
+    <>
       <Container
         maxWidth="sm"
         sx={{
@@ -74,7 +74,7 @@ useEffect(() => {
           {count === 7 ? "Test your learning" : "Next"}
         </Button>
       </Container>
-    </div>
+    </>
   );
 };
 

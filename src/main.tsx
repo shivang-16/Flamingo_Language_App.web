@@ -12,7 +12,7 @@ const theme = createTheme({
     },
   },
 });
-console.log(import.meta.env.VITE_FLAMIGO_API)
+
 export const server: string = import.meta.env.VITE_FLAMIGO_API || 'http://localhost:4501'
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
